@@ -2,12 +2,12 @@ import { CreateUserDto } from '@app/routes/user/dto/create-user.dto';
 import { UpdateUserDto } from '@app/routes/user/dto/update-user.dto';
 import { LoginUserDto } from '@app/routes/user/dto/login-user.dto';
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { UserEntity } from './user.entity';
+import { UserEntity } from '@app/routes/user/user.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { sign } from 'jsonwebtoken';
 import { JWT_SECRET } from '@app/config';
-import { IUserResponse } from './types/userResponse.interface';
+import { IUserResponse } from '@app/routes/user/types/userResponse.interface';
 import { compare } from 'bcrypt';
 
 @Injectable()

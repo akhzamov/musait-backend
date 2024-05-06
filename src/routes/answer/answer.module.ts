@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { AnswerService } from './answer.service';
-import { AnswerController } from './answer.controller';
+import { AnswerService } from '@app/routes/answer/answer.service';
+import { AnswerController } from '@app/routes/answer/answer.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AnswerEntity } from './answer.entity';
+import { AnswerEntity } from '@app/routes/answer/answer.entity';
 
 @Module({
   imports: [TypeOrmModule.forFeature([AnswerEntity])],

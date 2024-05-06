@@ -3,7 +3,7 @@ import { IExpressRequest } from '@app/types/expressRequest.interface';
 import { Injectable, NestMiddleware } from '@nestjs/common';
 import { NextFunction, Response } from 'express';
 import { verify } from 'jsonwebtoken';
-import { UserService } from '../user.service';
+import { UserService } from '@app/routes/user/user.service';
 
 @Injectable()
 export class AuthMiddleware implements NestMiddleware {

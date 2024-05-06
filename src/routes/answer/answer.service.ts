@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { CreateAnswerDto } from './dto/create-answer.dto';
-import { AnswerEntity } from './answer.entity';
-import { IAnswerResponse } from './types/answerResponse.interface';
+import { CreateAnswerDto } from '@app/routes/answer/dto/create-answer.dto';
+import { AnswerEntity } from '@app/routes/answer/answer.entity';
+import { IAnswerResponse } from '@app/routes/answer/types/answerResponse.interface';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 

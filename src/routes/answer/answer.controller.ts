@@ -9,9 +9,9 @@ import {
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
-import { AnswerService } from './answer.service';
-import { CreateAnswerDto } from './dto/create-answer.dto';
-import { IAnswerResponse } from './types/answerResponse.interface';
+import { AnswerService } from '@app/routes/answer/answer.service';
+import { CreateAnswerDto } from '@app/routes/answer/dto/create-answer.dto';
+import { IAnswerResponse } from '@app/routes/answer/types/answerResponse.interface';
 import { ApiTags } from '@nestjs/swagger';
 
 @ApiTags('Answers')

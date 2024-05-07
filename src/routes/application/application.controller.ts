@@ -26,8 +26,6 @@ export class ApplicationController {
 
   @Post()
   @UsePipes(new ValidationPipe())
-  @UseGuards(AuthGuard)
-  @Roles(Role.SUPERADMIN, Role.ADMIN)
   async createApplication(
     @Body() createApplicationDto: CreateApplicationDto,
   ): Promise<IApplicationResponse> {

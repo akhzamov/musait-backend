@@ -27,19 +27,4 @@ export class AnswerController {
     const newAnswer = await this.answerService.create(createAnswerDto);
     return this.answerService.buildAnswerResponse(newAnswer);
   }
-
-  @Get()
-  findAll() {
-    return this.answerService.findAll();
-  }
-
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.answerService.findOne(+id);
-  }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.answerService.remove(+id);
-  }
 }

@@ -6,8 +6,6 @@ export class CreateApplicationDto {
   @ApiProperty()
   readonly name: string;
 
-  @IsNotEmpty()
-  @IsEmail()
   @ApiProperty()
   readonly email: string;
 
@@ -17,7 +15,6 @@ export class CreateApplicationDto {
   @ApiProperty()
   readonly company: string;
 
-  @IsNotEmpty()
   @ApiProperty()
   readonly description: string;
 

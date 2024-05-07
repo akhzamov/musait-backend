@@ -23,18 +23,6 @@ export class AnswerService {
     return await this.answerRepository.save(newAnswer);
   }
 
-  findAll() {
-    return `This action returns all answer`;
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} answer`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} answer`;
-  }
-
   buildAnswerResponse(answer: AnswerEntity): IAnswerResponse {
     return { answer };
   }

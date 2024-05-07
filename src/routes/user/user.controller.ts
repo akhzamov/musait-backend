@@ -24,7 +24,7 @@ import { UserEntity } from '@app/routes/user/user.entity';
 import { AuthGuard } from '@app/routes/user/guards/auth.guard';
 import { Role } from '@app/routes/user/enums/roles.enum';
 import { Roles } from '@app/routes/user/decorators/roles.decorator';
-import { ApiResponse, ApiTags, getSchemaPath } from '@nestjs/swagger';
+import { ApiTags } from '@nestjs/swagger';
 
 @ApiTags('Users')
 @Controller('users')

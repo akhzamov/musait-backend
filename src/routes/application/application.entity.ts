@@ -9,10 +9,10 @@ export class ApplicationEntity {
   name: string;
 
   @Column()
-  email: string;
-
-  @Column()
   phone: string;
+
+  @Column({ default: '' })
+  email: string;
 
   @Column({ default: '' })
   company: string;

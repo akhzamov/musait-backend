@@ -1,6 +1,6 @@
 import { BeforeUpdate, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity({ name: 'application' })
+@Entity({ name: 'applications' })
 export class ApplicationEntity {
   @PrimaryGeneratedColumn()
   id: number;

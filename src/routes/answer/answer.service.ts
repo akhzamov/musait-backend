@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { CreateAnswerDto } from '@app/routes/answer/dto/create-answer.dto';
 import { AnswerEntity } from '@app/routes/answer/answer.entity';
 import { IAnswerResponse } from '@app/routes/answer/types/answerResponse.interface';
@@ -17,7 +17,18 @@ export class AnswerService {
     Object.assign(newAnswer, createAnswerDto);
 
     if (!newAnswer.answers) {
-      newAnswer.answers = [];
+      throw new HttpException(
+        'Answers array is missing',
+        HttpStatus.UNPROCESSABLE_ENTITY,
+      );
+    }
+
+    if (!newAnswer.age) {
+      newAnswer.age = '';
+    }
+
+    if (!newAnswer.company) {
+      newAnswer.company = '';
     }
 
     return await this.answerRepository.save(newAnswer);

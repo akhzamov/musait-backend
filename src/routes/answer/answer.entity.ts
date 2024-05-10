@@ -11,6 +11,12 @@ export class AnswerEntity {
   @Column()
   phone: string;
 
+  @Column({ default: '' })
+  age: string;
+
+  @Column({ default: '' })
+  company: string;
+
   @Column('simple-array')
   answers: string[];
 

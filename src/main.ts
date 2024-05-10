@@ -12,7 +12,7 @@ async function bootstrap() {
   const configService = app.get(ConfigService);
   const port = configService.get<number>('PORT');
 
-  const allowedDomains = ['https://musait.tech', 'http://localhost:3000/'];
+  const allowedDomains = ['https://musait.tech', 'http://localhost:3000'];
 
   app.enableCors({
     origin: function (origin, callback) {

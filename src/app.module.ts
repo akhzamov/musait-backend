@@ -10,6 +10,7 @@ import { RolesGuard } from '@app/routes/user/guards/roles.guard';
 import { AuthMiddleware } from '@app/routes/user/middlewares/auth.middleware';
 import { AnswerModule } from '@app/routes/answer/answer.module';
 import typeorm from '@app/config/typeorm';
+import { LeadModule } from './routes/lead/lead.module';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import typeorm from '@app/config/typeorm';
     ApplicationModule,
     UserModule,
     AnswerModule,
+    LeadModule,
   ],
   controllers: [AppController],
   providers: [
